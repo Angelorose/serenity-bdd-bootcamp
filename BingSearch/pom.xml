@@ -13,6 +13,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<serenity.version>3.5.1</serenity.version>
 		<junit5.version>5.9.1</junit5.version>
+		<selenium.version>4.7.2</selenium.version>
+		<bonigarcia.version>5.3.1</bonigarcia.version>
 	</properties>
 
 	<build>
@@ -80,5 +82,18 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>${bonigarcia.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+
 	</dependencies>
 </project>
