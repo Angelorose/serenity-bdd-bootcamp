@@ -21,8 +21,10 @@ public class bingSearchRunner {
 	@Test
 	void runTest() {
 		
-		nav.openBing();
+		nav.openBrowser("chrome");
+		nav.openBing("www.bing.com");
 		sea.byKeyword("puppies");
+		sea.clickSearch();
 		sea.clickImagesTab();
 	}
 

@@ -5,20 +5,25 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.serenitybdd.core.steps.UIInteractions;
+import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Step;
 
 public class navigateActions extends UIInteractions {
-//	public static WebDriver driver;
+	@Managed(driver = "chrome")
+	WebDriver driver;
+	String website = "www.bing.com";
+	
 	
 	@Step
-	public void openBing () {
+	public void openBrowser(String browser) {
+		WebDriverManager.chromedriver().setup();
+		driver.manage().window().maximize();
+	}
+	
+	
+	public void openBing (String website) {
 		
-		openUrl("www.bing.com");
-		
-//		WebDriverManager.chromedriver().setup();
-//		WebDriver driver = new ChromeDriver();
-//		driver.manage().window().maximize();
-//		driver.get("www.google.com");
+		openUrl(website);
 	}
 
 }
