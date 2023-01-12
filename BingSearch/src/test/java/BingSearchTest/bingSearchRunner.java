@@ -22,7 +22,7 @@ public class bingSearchRunner {
 	void runTest() {
 		
 		nav.openBing();
-		sea.byKeyword("serenity");
+		sea.byKeyword("puppies");
 		sea.clickImagesTab();
 	}
 
