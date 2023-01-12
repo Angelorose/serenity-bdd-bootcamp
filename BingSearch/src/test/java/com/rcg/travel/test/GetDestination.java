@@ -17,7 +17,7 @@ public class GetDestination extends UIInteractions{
 		return text;
 	}
 	
-	@Step("Validates if the '{0}' is equal to expected text")
+	@Step("Validates if the header contains this '{0}' text")
 	public void validates(String text) {
 		Assert.assertTrue(getDest().contains(text));
 	}
